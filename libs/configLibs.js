@@ -1,3 +1,4 @@
+const fs = require('fs')
 const utils = require('../utils/utils')
 
 const configLibs = {
@@ -13,6 +14,11 @@ const configLibs = {
         return config
     },
     setConfig: (data) => {
+
+        if (!fs.existsSync('./settings')) {
+            fs.mkdirSync('./settings');
+        }
+
         return utils.writeFile('./settings/settings.json', data)
     }
 }

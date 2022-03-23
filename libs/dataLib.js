@@ -1,3 +1,4 @@
+const fs = require('fs')
 const utils = require('../utils/utils')
 
 const dataLib = {
@@ -12,6 +13,11 @@ const dataLib = {
         return cf
     },
     writeData: (data) => {
+
+        if (!fs.existsSync('./data')) {
+            fs.mkdirSync('./data');
+        }
+
         return utils.writeFile('./data/followers.json', data)
     }
 }
