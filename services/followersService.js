@@ -74,7 +74,7 @@ const followersService = {
                 return
             }
 
-            console.log("Users that unfollows you:")
+            console.log("Users that unfollowed you:")
             for(const unfollower of unfollowers){
                 console.log(`${unfollower.login} - ${unfollower.html_url}`)
             }
