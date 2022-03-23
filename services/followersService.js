@@ -34,9 +34,11 @@ const followersService = {
         try{
             config = await configLibs.getConfig()
             if(config == null || config.user == null){
+                console.log("User not configured - please init user with -i param")
                 throw {error: costants.error.user} 
             }
         } catch(e){
+            console.log("User not configured - please init user with -i param")
             throw {error: costants.error.user}
         }
 
