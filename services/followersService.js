@@ -46,6 +46,7 @@ const followersService = {
             const data = await dataLib.getData()
             if(data == null){
                 //data file does not exists or has a problem
+                console.log("User not configured - please init user with -i param")
                 throw {error: costants.error.dataFile}
             }
 

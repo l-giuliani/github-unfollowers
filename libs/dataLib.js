@@ -8,7 +8,7 @@ const dataLib = {
             cf = await utils.readFile('./data/followers.json')
             return JSON.parse(cf)
         } catch(e){
-            console.log(e)
+            //console.log(e)
         }
         return cf
     },
